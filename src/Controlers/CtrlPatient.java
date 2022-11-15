@@ -31,6 +31,7 @@ public class CtrlPatient
         }
         return lesPatients;
     }
+
     public int getIdPatientByName(String nomPat) throws SQLException {
         int id = 0;
         ps = cnx.prepareStatement("SELECT patient.idPatient\n" +

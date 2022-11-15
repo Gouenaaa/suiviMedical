@@ -39,6 +39,7 @@ public class CtrlConsultation
         }
         return lesConsultations;
     }
+
     public int getLastNumberOfConsultation() throws SQLException {
         int num = 0;
         ps = cnx.prepareStatement("SELECT MAX(consultation.idConsult)\n" +
@@ -49,6 +50,7 @@ public class CtrlConsultation
         }
         return num;
     }
+
     public void InsertConsultation(int idConsult, String dateConsultation, int numPatient,int numMedecin) throws SQLException {
         ps = cnx.prepareStatement("INSERT INTO consultation (consultation.idConsult, consultation.dateConsult, consultation.numPatient, consultation.numMedecin)\n" +
                 "VALUES ("+idConsult+", '"+dateConsultation+"', "+numPatient+", "+numMedecin+")");

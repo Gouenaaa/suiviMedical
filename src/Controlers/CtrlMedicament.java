@@ -37,6 +37,7 @@ public class CtrlMedicament
         }
         return lesMedicaments;
     }
+
     public ArrayList<Medicament> getAllMedicaments() throws SQLException {
         ArrayList<Medicament> lesMedicaments = new ArrayList<>();
         ps = cnx.prepareStatement("SELECT medicament.idMedoc, medicament.nomMedoc, medicament.prixMedoc\n" +

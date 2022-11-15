@@ -102,7 +102,9 @@ public class FrmPrescrire extends JFrame
                 }
                 else{
                     int idConsult = Integer.parseInt(txtNumeroConsultation.getText());
-                    String date = String.valueOf(dcDateConsultation.getDate().getYear())+"-"+String.valueOf(dcDateConsultation.getDate().getMonth())+"-"+dcDateConsultation.getDate().getDay();
+                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+                    String date = sdf.format(dcDateConsultation.getDate()).toString();
+                    //String date = String.valueOf(dcDateConsultation.getDate().getYear())+"-"+String.valueOf(dcDateConsultation.getDate().getMonth())+"-"+dcDateConsultation.getDate().getDay();
                     int idPatient;
                     int idMedecin;
                     try {
